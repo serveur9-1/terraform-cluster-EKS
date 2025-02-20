@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"core-compute","Source":"./modules/core-compute","Dir":"modules/core-compute"},{"Key":"eks","Source":"./eks","Dir":"eks"}]}
