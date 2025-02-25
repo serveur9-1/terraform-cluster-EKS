@@ -7,7 +7,7 @@ variable "eks_cluster_name" {
 variable "eks_cluster_version" {
   description = "Version du cluster EKS"
   type        = string
-  default     = "1.29"
+  default     = "1.32"
 }
 
 variable "private_subnets_ids" {
