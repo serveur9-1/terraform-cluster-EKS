@@ -4,4 +4,7 @@ resource "aws_lb" "eks_alb" {
   load_balancer_type = "application"
   security_groups    = [var.security_group_id]
   subnets            = var.public_subnets_ids
+  tags = {
+    Name = "eks-alb"
+  } 
 }

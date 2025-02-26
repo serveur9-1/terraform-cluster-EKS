@@ -7,7 +7,7 @@ variable "eks_cluster_name" {
 variable "eks_cluster_version" {
   description = "Version du cluster EKS"
   type        = string
-  default     = "1.29"
+  default     = "1.32"
 }
 
 variable "private_subnets_ids" {
@@ -48,19 +48,13 @@ variable "eks_iam_policies" {
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
     
     # Politique pour permettre l'accès complet à VPC
-    "arn:aws:iam::aws:policy/AmazonVPCFullAccess",
+    "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
     
     # Politique pour permettre l'accès en lecture aux images dans Amazon ECR
     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
     
     # Politique pour permettre la gestion du CNI d'EKS (réseau du cluster)
-    "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
-    
-    # Politique permettant de décrire les instances EC2 et les groupes de sécurité (pour les nœuds)
-    "arn:aws:iam::aws:policy/AmazonEC2DescribeInstances",
-    
-    # Politique permettant de décrire les VPC et les sous-réseaux
-    "arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess"
+    "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
   ]
 }
 
